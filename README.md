@@ -27,3 +27,9 @@
 2.1 settings.py
 
 2.2 templates
+
+![imagen](https://github.com/user-attachments/assets/479f556b-c4a4-4752-b675-abb48f1220d1)
+
+![imagen](https://github.com/user-attachments/assets/d956424f-d53d-4cc7-84db-3ba51126849b)
+
+
