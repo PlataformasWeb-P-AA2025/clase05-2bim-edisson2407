@@ -124,6 +124,8 @@ def en_grupo(nombre):
         return user.groups.filter(name=nombre).exists()
     return user_passes_test(predicate)
 
+@login_required # queda asi porque en settings.py se ha configurado
+@permission_required('administrativo.add_numerotelefonico', )
 @en_grupo('supervisor')
 def crear_numero_telefonico(request):
     """
@@ -141,7 +143,8 @@ def crear_numero_telefonico(request):
 
     return render(request, 'crearNumeroTelefonico.html', diccionario)
 
-
+@login_required # queda asi porque en settings.py se ha configurado
+@permission_required('administrativo.change_numerotelefonico', )
 def editar_numero_telefonico(request, id):
     """
     """
@@ -158,6 +161,8 @@ def editar_numero_telefonico(request, id):
 
     return render(request, 'crearNumeroTelefonico.html', diccionario)
 
+@login_required # queda asi porque en settings.py se ha configurado
+@permission_required('administrativo.add_numerotelefonico', )
 def crear_numero_telefonico_estudiante(request, id):
     """
     """
